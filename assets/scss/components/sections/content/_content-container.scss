@@ -1,0 +1,14 @@
+@use '../../../presets' as *;
+@use '../../../mixins' as *;
+
+
+
+
+.content-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "ca"
+    "cf"
+}
