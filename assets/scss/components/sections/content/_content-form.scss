@@ -4,7 +4,14 @@
 
 .content-form {
   grid-area: "cf";
-  min-width: 100vw;
   height: 120px;
   background-color: $color-primary;
+  display: flex;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

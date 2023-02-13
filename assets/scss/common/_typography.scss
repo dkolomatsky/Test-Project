@@ -67,6 +67,15 @@ h2 {
 
 a {
     text-decoration: none;
-
     color: $color-light;
+}
+
+form {
+    display: flex;
+    gap: $gap;
+}
+
+.cont-imput {
+    width: 420px;
+    height: 60px;
 }

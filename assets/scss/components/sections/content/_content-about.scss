@@ -8,6 +8,6 @@
   grid-area: "ca";
   min-height: calc(100vh - 120px);
   display: flex;
-  min-width: 100vw;
-  background-color: #e5e5e5;
+  align-items: center;
+  margin-top: -50px;
 }
