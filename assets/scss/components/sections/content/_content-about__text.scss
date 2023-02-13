@@ -3,16 +3,32 @@
 
 
 .content-about__text {
-  max-width: calc(100% - 320px);
-  padding: 0 25px 0 5px;
+  max-width: calc(100% - 271px);
 }
 
 .main-content {
   font-size: 1.125rem;
   letter-spacing: 0.0555em;
-  line-height: 1.2em;
+  line-height: 1.15em;
   font-weight: 400;
   font-family: $font-header;
   color: $color-gray;
-  border-right: 1px solid #000;
+}
+
+p:first-of-type {
+  margin-top: -5px;
+}
+
+p:first-of-type::after {
+  content: "";
+  /*надо разобраться для чего это
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 200px;
+  background-color: rgba(99, 117, 136, 0.1);*/
+}
+
+p:last-of-type {
+  margin: 0;
 }

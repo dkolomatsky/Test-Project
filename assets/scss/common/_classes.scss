@@ -1,8 +1,7 @@
 @use '../presets' as *;
 @use '../mixins' as *;
 
-.btn
-{
+.btn {
     font-weight: 400;
     line-height: 1.2em;
 
@@ -16,56 +15,59 @@
 
     align-items: center;
     justify-content: center;
-    @include lg-min
-    {
+
+    @include lg-min {
         font-size: 1.125rem;
     }
 
-    &--light
-    {
+    &--light {
         width: 250px;
 
         border: 2px solid $color-light;
         background-color: rgba($color-light, .1);
 
-        @include lg-min
-        {
+        @include lg-min {
             width: 250px;
             height: 60px;
         }
-        @include lg-md
-        {
+
+        @include lg-md {
             width: 200px;
             height: 50px;
         }
-        @include md-sm
-        {
+
+        @include md-sm {
             width: 170px;
             height: 40px;
         }
-        @include sm
-        {
+
+        @include sm {
             width: 170px;
             height: 40px;
         }
     }
 
-    &--primary
-    {
+    &--primary {
         width: 350px;
 
         border: 2px solid $color-primary;
         background-color: rgb($color-primary, .8);
 
-        @include sm
-        {
+        @include sm {
             width: 100%;
         }
     }
 
+    &--subscribe {
+        background-color: rgba($color-light, .1);
+        width: 420px;
+        letter-spacing: 0.111em;
+        line-height: 2.166em;
+        font-family: $font-main;
+    }
+
     &:hover,
-    &:focus
-    {
+    &:focus {
         background-color: $color-accent;
     }
 }

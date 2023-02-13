@@ -5,8 +5,6 @@
 
 
 .content-container {
-  grid-template-areas:
-    "ca"
-    "cf";
+
   @extend %container;
 }

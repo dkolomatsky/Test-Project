@@ -1,0 +1,30 @@
+@use '../../../presets' as *;
+@use '../../../mixins' as *;
+
+
+.form-section {
+  height: 120px;
+  background-color: $color-primary;
+
+  &__container {
+    @extend %container;
+    height: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+
+  &__action,
+  &-imput {
+    width: 420px;
+    height: 60px;
+    border-bottom: 2px solid $color-light;
+  }
+
+  &-imput {
+    background-color: rgba($color-light, .05);
+  }
+}
