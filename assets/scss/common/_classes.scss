@@ -58,16 +58,13 @@
         }
     }
 
-    &--subscribe {
-        background-color: rgba($color-light, .1);
-        width: 420px;
-        letter-spacing: 0.111em;
-        line-height: 2.166em;
-        font-family: $font-main;
-    }
-
     &:hover,
     &:focus {
         background-color: $color-accent;
     }
+}
+
+button {
+    overflow: visible;
+    text-transform: none;
 }

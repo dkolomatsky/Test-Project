@@ -159,19 +159,19 @@
     </div>
   </section>
   <section class="form-section">
-    <div class="form-section__container">
-      <form class="form" action="url">
-        <label for="name">
-          <input class="form-imput" type="text" name="name" id="name" placeholder="Your name ...">
-        </label>
-        <label for="mail">
-          <input class="form-imput" type="email" name="email" id="mail" placeholder="Your email ...">
-        </label>
-        <div class="form__action">
-          <a class="btn btn--subscribe" href="">Subscribe</a>
-        </div>
-      </form>
-    </div>
+    <form class="form-section__container" action="#">
+      <div class="form-item">
+        <input class="form-item__imput" type="text" name="name" placeholder="Your name ...">
+      </div>
+      <div class="form-item">
+        <input class="form-item__imput" type="email" name="email" placeholder="Your email ...">
+      </div>
+      <div class="form-item">
+        <button class="btn btn--primary" type="submit">
+          Subscribe
+        </button>
+      </div>
+    </form>
   </section>
 
   <!-- Подключаем библиотеку jquery, необходимую для работы нашего основного скрипта -->

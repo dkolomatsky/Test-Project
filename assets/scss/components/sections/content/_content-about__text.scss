@@ -2,31 +2,30 @@
 @use '../../../mixins' as *;
 
 
-.content-about__text {
-  max-width: calc(100% - 271px);
-}
+.content-about__text {}
 
 .main-content {
   font-size: 1.125rem;
-  letter-spacing: 0.0555em;
-  line-height: 1.15em;
-  font-weight: 400;
-  font-family: $font-header;
+  letter-spacing: 0.049em;
+  line-height: 1.15;
+  font-family: $font-main;
   color: $color-gray;
+  font-weight: 400;
 }
 
 p:first-of-type {
   margin-top: -5px;
+  position: relative;
 }
 
 p:first-of-type::after {
+  right: -50px;
   content: "";
-  /*надо разобраться для чего это
   position: absolute;
   top: 0;
   width: 2px;
   height: 200px;
-  background-color: rgba(99, 117, 136, 0.1);*/
+  background-color: rgba(99, 117, 136, 0.1);
 }
 
 p:last-of-type {

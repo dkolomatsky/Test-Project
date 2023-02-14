@@ -5,6 +5,8 @@
 
 
 .content-about {
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr 271px;
+  gap: $gap-x5;
 }
