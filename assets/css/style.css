@@ -229,6 +229,14 @@ a {
   color: #ffffff;
 }
 
+button {
+  overflow: visible;
+
+  margin: 0;
+
+  text-transform: none;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,12 +274,6 @@ a {
 .btn:hover,
 .btn:focus {
   background-color: #d66926;
-}
-
-button {
-  overflow: visible;
-
-  text-transform: none;
 }
 
 .header {
@@ -680,6 +682,10 @@ button {
   grid-template-columns: 1fr 271px;
 }
 
+.content-about__text {
+  margin: 0;
+}
+
 .main-content {
   letter-spacing: 0.049em;
 
@@ -747,6 +753,7 @@ p:last-of-type {
 
 .form-item {
   font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
 }
 .form-item__imput,
 .form-item .btn--primary {
@@ -754,14 +761,30 @@ p:last-of-type {
   height: 60px;
   padding: 1px 30px;
 
+  -webkit-transition: border-color 0.5s, background-color 0.5s ease-in-out;
+       -o-transition: border-color 0.5s, background-color 0.5s ease-in-out;
+          transition: border-color 0.5s, background-color 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
   letter-spacing: 0.15em;
 
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
-
-  font-size: 1.125rem;
+}
+.form-item__imput:placeholder,
+.form-item .btn--primary:placeholder {
+  color: #637588;
+}
+.form-item__imput:hover,
+.form-item__imput:focus,
+.form-item .btn--primary:hover,
+.form-item .btn--primary:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .form-item .btn--primary {
   padding: 9px 18px;
@@ -774,6 +797,8 @@ p:last-of-type {
 }
 .form-item .btn--primary:hover,
 .form-item .btn--primary:focus {
+  cursor: pointer;
+
   border: 2px solid #ffffff;
   background-color: #d66926;
 }
