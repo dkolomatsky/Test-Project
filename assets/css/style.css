@@ -166,6 +166,7 @@ template {
 [hidden] {
   display: none;
 }
+.posts-container,
 .form-section__container,
 .content-container,
 .header-content__container,
@@ -802,6 +803,86 @@ p:last-of-type {
   border: 2px solid #ffffff;
   background-color: #d66926;
 }
+
+.posts-item {
+  display: grid;
+
+  min-height: 50vh;
+
+  grid-template-areas: "b1 b2 b3" "b4 b5 b6";
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.post-item__block {
+  margin: 10px;
+}
+
+.post-item__block--image {
+  width: 100%;
+}
+
+.post-item__block--link {
+  color: #637588;
+}
+
+.post-item__block:nth-of-type(1) {
+  grid-area: b1;
+}
+
+.post-item__block:nth-of-type(2) {
+  grid-area: b2;
+}
+
+.post-item__block:nth-of-type(3) {
+  grid-area: b3;
+}
+
+.post-item__block:nth-of-type(4) {
+  background-color: blue;
+
+  grid-area: b4;
+}
+
+.post-item__block:nth-of-type(5) {
+  background-color: red;
+
+  grid-area: b5;
+}
+
+.post-item__block:nth-of-type(6) {
+  background-color: orange;
+
+  grid-area: b6;
+}
+
+.post-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  margin-top: 20px;
+}
+
+.posts-title {
+  margin-top: 95px;
+  margin-bottom: 75px;
+
+  letter-spacing: 0.1em;
+
+  color: #2d3651;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
 @media (min-width: 576px) {
   .skills {
     padding: 10px;
@@ -809,12 +890,17 @@ p:last-of-type {
   .skill-action {
     margin-bottom: 30px;
   }
+  .post-action {
+    margin-bottom: 30px;
+  }
 }
+
 @media (min-height: 691px) {
   .skill-item {
     min-height: calc(33.333vh - 13.3333333333px);
   }
 }
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -830,6 +916,7 @@ p:last-of-type {
     gap: 40px;
   }
 }
+
 @media (min-width: 992px) {
   h1 {
     letter-spacing: 0.08em;
@@ -851,6 +938,7 @@ p:last-of-type {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
 }
+
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     letter-spacing: 0.075em;
@@ -869,6 +957,7 @@ p:last-of-type {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
+
 @media (max-width: 767.8px) {
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
@@ -877,6 +966,7 @@ p:last-of-type {
     display: none;
   }
 }
+
 @media (max-width: 767.8px) and (min-width: 576px) {
   h1 {
     letter-spacing: 0.066em;
@@ -895,11 +985,13 @@ p:last-of-type {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
 }
+
 @media (max-height: 690px) {
   .skill-item {
     min-height: 216.6666666667px;
   }
 }
+
 @media (max-width: 575.8px) {
   h1 {
     letter-spacing: 0.066em;
