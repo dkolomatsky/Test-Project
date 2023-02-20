@@ -13,9 +13,9 @@
 .posts-item {
   display: grid;
   grid-template-areas:
-    "b1 b2 b3"
-    "b4 b5 b6";
-  grid-template-columns: 2fr 1fr 1fr;
+    "b1 b1 b2 b3"
+    "b4 b5 b6 b6";
+  grid-template-columns: repeat(4, 1fr);
 
   min-height: calc(50vh);
 }
@@ -26,6 +26,8 @@
 
 .post-item__block--image {
   width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 .post-item__block--link {
@@ -34,32 +36,26 @@
 
 .post-item__block:nth-of-type(1) {
   grid-area: b1;
-
 }
 
 .post-item__block:nth-of-type(2) {
   grid-area: b2;
-
 }
 
 .post-item__block:nth-of-type(3) {
   grid-area: b3;
-
 }
 
 .post-item__block:nth-of-type(4) {
   grid-area: b4;
-  background-color: blue;
 }
 
 .post-item__block:nth-of-type(5) {
   grid-area: b5;
-  background-color: red;
 }
 
 .post-item__block:nth-of-type(6) {
   grid-area: b6;
-  background-color: orange;
 }
 
 

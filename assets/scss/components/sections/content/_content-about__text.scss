@@ -20,7 +20,7 @@ p:first-of-type {
   position: relative;
 }
 
-p:first-of-type::after {
+.p-about:first-of-type::after {
   right: -50px;
   content: "";
   position: absolute;
