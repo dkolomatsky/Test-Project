@@ -66,6 +66,7 @@ h2 {
     margin: 0 0 3rem 0;
 }
 
+
 a {
     text-decoration: none;
     color: $color-light;
@@ -75,4 +76,9 @@ button {
     overflow: visible;
     text-transform: none;
     margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
 }

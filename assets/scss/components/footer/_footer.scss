@@ -6,3 +6,34 @@
   background-color: $color-primary;
   height: 250px;
 }
+
+.footer-container {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer-icons {
+  margin-bottom: $gap;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content__text {
+  display: block;
+
+  &--button {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    line-height: 1.25em;
+    color: #637588;
+    font-weight: 700;
+  }
+}

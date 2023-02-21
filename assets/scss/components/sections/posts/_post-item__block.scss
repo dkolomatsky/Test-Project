@@ -4,38 +4,43 @@
 
 
 .post-item__block {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: calc(50vh - 4 * 10px / 2);
-  padding: $gap-sm;
+  height: 100%;
+  background-color: #eeeeee;
 
-  &--image {
-    height: 300px;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
+
+  &--link {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    height: 100%;
 
   }
 
-  &--link {
-    display: block;
-    width: 100%;
-    height: 100%;
-    @include pos-absolute
+  &--image {
+    background-position: center;
+    background-size: cover;
   }
 
   &--title {
-    background-color: #eeeeee;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    align-content: center;
     text-align: center;
+    font-family: $font-header;
     color: $color-gray;
-    height: 250px;
-    width: 100%;
-    padding: 0 $gap;
+    padding: $gap;
+
+    p {
+      margin: 16px 0;
+      font-size: 1rem;
+      line-height: 1.15em;
+      font-family: $font-main;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      letter-spacing: 0.05em;
+      line-height: 1.15em;
+    }
   }
 }
 

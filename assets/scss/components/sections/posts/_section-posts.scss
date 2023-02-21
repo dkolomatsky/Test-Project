@@ -17,8 +17,7 @@
     "b1 b1 b2 b3"
     "b4 b5 b6 b6";
   grid-template-columns: repeat(4, 1fr);
-  min-width: 100%;
-
+  gap: $gap;
 }
 
 

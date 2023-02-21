@@ -166,6 +166,7 @@ template {
 [hidden] {
   display: none;
 }
+.footer-container,
 .posts-container,
 .form-section__container,
 .content-container,
@@ -236,6 +237,11 @@ button {
   margin: 0;
 
   text-transform: none;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .btn {
@@ -812,8 +818,7 @@ p:last-of-type {
 .posts-item {
   display: grid;
 
-  min-width: 100%;
-
+  gap: 20px;
   grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
   grid-template-columns: repeat(4, 1fr);
 }
@@ -846,62 +851,47 @@ p:last-of-type {
 }
 
 .post-item__block {
-  position: relative;
+  height: 100%;
 
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  background-color: #eeeeee;
+}
+.post-item__block--link {
+  display: grid;
+  overflow: hidden;
 
-  min-height: calc(50vh - 20px);
-  padding: 10px;
+  height: 100%;
+
+  grid-template-rows: 300px 1fr;
 }
 .post-item__block--image {
-  width: 100%;
-  height: 300px;
-
   background-position: center;
   background-size: cover;
 }
-.post-item__block--link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  display: block;
-
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
 .post-item__block--title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: grid;
+  -ms-flex-line-pack: center;
+  align-content: center;
 
-  width: 100%;
-  height: 250px;
-  padding: 0 20px;
+  padding: 20px;
 
   text-align: center;
 
   color: #637588;
-  background-color: #eeeeee;
+
+  font-family: "Roboto Slab", serif;
+}
+.post-item__block--title p {
+  margin: 16px 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.15em;
+}
+.post-item__block--title h3 {
+  letter-spacing: 0.05em;
+
+  font-size: 1.125rem;
+  line-height: 1.15em;
 }
 
 .post-item__block:nth-of-type(1) {
@@ -934,6 +924,53 @@ p:last-of-type {
   background-color: #2d3651;
 }
 
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.footer-icons {
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.footer-content__text {
+  display: block;
+}
+.footer-content__text--button {
+  letter-spacing: 0.1em;
+
+  color: #637588;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25em;
+}
 @media (min-width: 576px) {
   .skills {
     padding: 10px;
@@ -945,13 +982,11 @@ p:last-of-type {
     margin-bottom: 30px;
   }
 }
-
 @media (min-height: 691px) {
   .skill-item {
     min-height: calc(33.333vh - 13.3333333333px);
   }
 }
-
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -967,7 +1002,6 @@ p:last-of-type {
     gap: 40px;
   }
 }
-
 @media (min-width: 992px) {
   h1 {
     letter-spacing: 0.08em;
@@ -989,7 +1023,6 @@ p:last-of-type {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
 }
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
     letter-spacing: 0.075em;
@@ -1008,7 +1041,6 @@ p:last-of-type {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
-
 @media (max-width: 767.8px) {
   .header-menu {
     background-color: rgba(68, 89, 110, 0.25);
@@ -1017,7 +1049,6 @@ p:last-of-type {
     display: none;
   }
 }
-
 @media (max-width: 767.8px) and (min-width: 576px) {
   h1 {
     letter-spacing: 0.066em;
@@ -1036,13 +1067,11 @@ p:last-of-type {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
 }
-
 @media (max-height: 690px) {
   .skill-item {
     min-height: 216.6666666667px;
   }
 }
-
 @media (max-width: 575.8px) {
   h1 {
     letter-spacing: 0.066em;
