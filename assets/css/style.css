@@ -804,28 +804,104 @@ p:last-of-type {
   background-color: #d66926;
 }
 
+.posts {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .posts-item {
   display: grid;
 
-  min-height: 50vh;
+  min-width: 100%;
 
   grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
   grid-template-columns: repeat(4, 1fr);
 }
 
-.post-item__block {
-  margin: 10px;
+.post-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  margin-top: 20px;
 }
 
+.posts-title {
+  margin-bottom: 48px;
+
+  letter-spacing: 0.1em;
+
+  color: #2d3651;
+
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+.post-item__block {
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+
+  min-height: calc(50vh - 20px);
+  padding: 10px;
+}
 .post-item__block--image {
   width: 100%;
+  height: 300px;
 
   background-position: center;
   background-size: cover;
 }
-
 .post-item__block--link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.post-item__block--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 250px;
+  padding: 0 20px;
+
+  text-align: center;
+
   color: #637588;
+  background-color: #eeeeee;
 }
 
 .post-item__block:nth-of-type(1) {
@@ -852,32 +928,10 @@ p:last-of-type {
   grid-area: b6;
 }
 
-.post-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.footer {
+  height: 250px;
 
-  margin-top: 20px;
-}
-
-.posts-title {
-  margin-top: 95px;
-  margin-bottom: 75px;
-
-  letter-spacing: 0.1em;
-
-  color: #2d3651;
-
-  font-family: "Roboto Slab", serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2em;
+  background-color: #2d3651;
 }
 
 @media (min-width: 576px) {

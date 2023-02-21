@@ -1,2 +1,8 @@
 @use '../../presets' as *;
 @use '../../mixins' as *;
+
+
+.footer {
+  background-color: $color-primary;
+  height: 250px;
+}
