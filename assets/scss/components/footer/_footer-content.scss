@@ -1,0 +1,25 @@
+@use '../../presets' as *;
+@use '../../mixins' as *;
+
+
+
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-gray-light;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.footer-content__text {
+  display: block;
+
+  &--top {
+    color: $color-gray;
+    font-weight: 100;
+    letter-spacing: 0.33em;
+    margin-right: -0.5em;
+  }
+}

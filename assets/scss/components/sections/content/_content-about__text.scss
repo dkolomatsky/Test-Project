@@ -15,7 +15,7 @@
   font-weight: 400;
 }
 
-p:first-of-type {
+.p-about:first-of-type {
   margin-top: -5px;
   position: relative;
 }
@@ -30,6 +30,6 @@ p:first-of-type {
   background-color: rgba(99, 117, 136, 0.1);
 }
 
-p:last-of-type {
+.p-about:last-of-type {
   margin: 0;
 }

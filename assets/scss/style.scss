@@ -9,16 +9,21 @@
 @use 'components/header/header-logo';
 @use 'components/header/header-navbar';
 @use 'components/header/header-content';
+
 @use 'components/sections/skills/skills';
 @use 'components/sections/skills/skill-item';
+
 @use 'components/sections/content/content-container';
 @use 'components/sections/content/content';
 @use 'components/sections/content/content-about';
 @use 'components/sections/content/content-about__text';
 @use 'components/sections/content/content-about__image';
 @use 'components/sections/form/form-section';
-@use 'components/sections/posts/section-posts';
+
+@use 'components/sections/posts/posts';
 @use 'components/sections/posts/posts-title';
 @use 'components/sections/posts/post-item__block';
 
 @use 'components/footer/footer';
+@use 'components/footer/footer-icons';
+@use 'components/footer/footer-content';
