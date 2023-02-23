@@ -1,32 +1,39 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
 
 
 .footer-icons {
   position: relative;
-  margin-bottom: 40px;
+
   display: flex;
 
+  margin-bottom: 40px;
+
   &::after {
-    content: "";
     position: absolute;
-    left: calc(50% - 37.5px);
     bottom: -20px;
+    left: calc(50% - 37.5px);
+
     width: 75px;
     height: 2px;
+
+    content: "";
+
     background-color: rgba(255, 255, 255, 0.1);
   }
 
   &__link {
     display: block;
+
     padding: $gap-sm;
   }
 }
 
 .fab {
-  font-size: 2.25rem;
   transition: color 0.5s;
+
+  font-size: 2.25rem;
 
   &:hover {
     color: $color-accent;

@@ -1,21 +1,21 @@
-@use '../../../presets' as *;
-@use '../../../mixins' as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 
 .form-section {
-  background-color: $color-primary;
   padding: 30px 0;
 
+  background-color: $color-primary;
+
   &__container {
+    margin: auto;
+
     @extend %container;
     gap: $gap;
     grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include sm {
       grid-template-columns: 1fr;
     }
@@ -31,14 +31,16 @@
   .btn--primary {
     width: 100%;
     height: 60px;
-    background-color: rgba($color-light, .05);
-    border-bottom: 2px solid rgba($color-light, 0.25);
-    border: 2px solid rgba($color-light, 0);
     padding: 1px 30px;
-    letter-spacing: 0.15em;
-    color: $color-light;
+
     transition: border-color 0.5s, background-color 0.5s ease-in-out;
     transform: rotate(0deg);
+    letter-spacing: 0.15em;
+
+    color: $color-light;
+    border: 2px solid rgba($color-light, 0);
+    border-bottom: 2px solid rgba($color-light, 0.25);
+    background-color: rgba($color-light, 0.05);
 
     &:placeholder {
       color: $color-gray;
@@ -48,22 +50,25 @@
     &:focus {
       border-color: rgba(255, 255, 255, 0.15);
       border-bottom-color: #ffffff;
-      background-color: rgba(255, 255, 255, 0.15)
+      background-color: rgba(255, 255, 255, 0.15);
     }
   }
 
   .btn--primary {
-    letter-spacing: 0.1em;
-    background-color: rgba($color-light, 0.102);
     padding: 9px 18px;
+
+    letter-spacing: 0.1em;
+
+    background-color: rgba($color-light, 0.102);
+
     line-height: 1.15em;
 
     &:hover,
     &:focus {
-      background-color: $color-accent;
-      border: 2px solid $color-light;
       cursor: pointer;
 
+      border: 2px solid $color-light;
+      background-color: $color-accent;
     }
   }
 }

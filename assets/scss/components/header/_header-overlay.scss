@@ -1,12 +1,11 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
-.header-overlay
-{
-    opacity: .8;
-    background-color: $color-primary;
-    background-position: center;
-    background-size: cover;
+.header-overlay {
+  opacity: 0.8;
+  background-color: $color-primary;
+  background-position: center;
+  background-size: cover;
 
-    @include pos-absolute;
+  @include pos-absolute;
 }

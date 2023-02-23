@@ -1,18 +1,16 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
-.header
-{
-    position: relative;
+.header {
+  position: relative;
 
-    display: grid;
+  display: grid;
+  align-items: center;
 
-    min-height: 100vh;
-    padding: 150px 0;
+  min-height: 100vh;
+  padding: 150px 0;
 
-    background-color: $color-primary;
-    background-position: center;
-    background-size: cover;
-
-    align-items: center;
+  background-color: $color-primary;
+  background-position: center;
+  background-size: cover;
 }

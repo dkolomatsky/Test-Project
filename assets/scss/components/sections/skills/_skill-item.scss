@@ -1,97 +1,94 @@
-@use '../../../presets' as *;
-@use '../../../mixins' as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .skill-item {
+  position: relative;
 
-    position: relative;
+  display: grid;
+  overflow: hidden;
+  align-items: center;
+  /*высчитываем высоту чтоб все блоки поместились на размер 1 экрана. Для этого минусуем горизонтальные падинги (их 4)  можно было записать и так: min-height: calc(33.333vh - 13.333px); - 13.333px  это результат 4*10px/3 */
 
-    display: grid;
-    overflow: hidden;
-    /*высчитываем высоту чтоб все блоки поместились на размер 1 экрана. Для этого минусуем горизонтальные падинги (их 4)  можно было записать и так: min-height: calc(33.333vh - 13.333px); - 13.333px  это результат 4*10px/3 */
+  min-height: calc(33.333vh - 4 * 10px / 3);
+  padding: $gap;
+
+  justify-items: center;
+
+  @media (min-height: 691px) {
     min-height: calc(33.333vh - 4 * 10px / 3);
-    padding: $gap;
+  }
+
+  @media (max-height: 690px) {
+    min-height: calc(690px / 3 - 4 * 10px / 3);
+  }
+
+  &__title {
+    z-index: 1;
+
+    letter-spacing: 0.1em;
+
+    font-weight: 700;
+
+    @include pos-absolute;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include sm-min {
+      font-size: 1.125rem;
+    }
+    @include sm {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__image {
+    transition: transform 0.5s;
+
+    background-color: $color-primary;
+    background-position: center;
+    background-size: cover;
+
+    @include pos-absolute;
+  }
+
+  &__overlay {
+    transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-primary;
+
+    @include pos-absolute;
+  }
+
+  &__link {
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 
-    @media (min-height: 691px) {
-        min-height: calc(33.333vh - 4 * 10px / 3);
+    width: 100%;
+    height: 100%;
+    padding: $gap;
+
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    .skill-item__image {
+      transform: scale(1.1);
     }
 
-    @media (max-height: 690px) {
-        min-height: calc(690px / 3 - 4 * 10px / 3);
+    .skill-item__link {
+      color: $color-accent;
     }
 
-    &__title {
-        font-weight: 700;
-
-        z-index: 1;
-
-        letter-spacing: .1em;
-
-        @include pos-absolute;
-
-        @include md-min {
-            font-size: 1.25rem;
-        }
-
-        @include sm-min {
-            font-size: 1.125rem;
-        }
-
-        @include sm {
-            font-size: 1.125rem;
-        }
+    .skill-item__overlay {
+      opacity: 0.95;
     }
-
-    &__image {
-        transition: transform .5s;
-
-        background-color: $color-primary;
-        background-position: center;
-        background-size: cover;
-
-        @include pos-absolute;
-    }
-
-    &__overlay {
-        transition: opacity .5s;
-
-        opacity: .8;
-        background-color: $color-primary;
-
-        @include pos-absolute;
-    }
-
-    &__link {
-        display: flex;
-
-        width: 100%;
-        height: 100%;
-        padding: $gap;
-
-        transition: color .5s;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-    &:hover {
-        .skill-item__image {
-            transform: scale(1.1);
-        }
-
-        .skill-item__link {
-            color: $color-accent;
-        }
-
-        .skill-item__overlay {
-            opacity: .95;
-        }
-    }
+  }
 }
 
 @for $i from 1 through 9 {
-    .skill-item:nth-of-type(#{$i}) {
-        grid-area: a#{$i};
-    }
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
 }

@@ -1,11 +1,12 @@
-@use '../../../presets' as *;
-@use '../../../mixins' as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 
 
 .about-image {
   display: grid;
   align-content: center;
+
   justify-items: center;
 }
 

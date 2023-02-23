@@ -1,58 +1,60 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .btn {
-    display: flex;
-    height: 60px;
-    padding: .5em 1em;
-    transition: background-color .5s;
-    letter-spacing: .1em;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 60px;
+  padding: 0.5em 1em;
+
+  transition: background-color 0.5s;
+  letter-spacing: 0.1em;
+
+  @include lg-min {
+    font-size: 1.125rem;
+  }
+
+  &--light {
+    width: 250px;
+
+    border: 2px solid $color-light;
+    background-color: rgba($color-light, 0.1);
 
     @include lg-min {
-        font-size: 1.125rem;
+      width: 250px;
+      height: 60px;
     }
-
-    &--light {
-        width: 250px;
-        border: 2px solid $color-light;
-        background-color: rgba($color-light, .1);
-
-        @include lg-min {
-            width: 250px;
-            height: 60px;
-        }
-
-        @include lg-md {
-            width: 200px;
-            height: 50px;
-        }
-
-        @include md-sm {
-            width: 170px;
-            height: 40px;
-        }
-
-        @include sm {
-            width: 170px;
-            height: 40px;
-        }
+    @include lg-md {
+      width: 200px;
+      height: 50px;
     }
-
-    &--primary {
-        width: 350px;
-        font-size: 1.125rem;
-        border: 2px solid $color-primary;
-        background-color: rgb($color-primary, .8);
-
-        @include sm {
-            width: 100%;
-        }
+    @include md-sm {
+      width: 170px;
+      height: 40px;
     }
-
-    &:hover,
-    &:focus {
-        background-color: $color-accent;
+    @include sm {
+      width: 170px;
+      height: 40px;
     }
+  }
+
+  &--primary {
+    width: 350px;
+
+    border: 2px solid $color-primary;
+    background-color: rgb($color-primary, 0.8);
+
+    font-size: 1.125rem;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
 }

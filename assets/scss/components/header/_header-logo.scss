@@ -1,35 +1,31 @@
-@use '../../presets' as *;
-@use '../../mixins' as *;
+@use "../../presets" as *;
+@use "../../mixins" as *;
 
-.header-logo
-{
-    font-size: 1.5rem;
-    font-weight: 400;
+.header-logo {
+  text-align: center;
+  letter-spacing: 0.22em;
 
-    text-align: center;
-    letter-spacing: .22em;
+  color: $color-light;
 
-    color: $color-light;
+  font-size: 1.5rem;
+  font-weight: 400;
 
-    &__link
-    {
-        display: flex;
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
 
-        padding: $gap $gap $gap 0;
+    padding: $gap $gap $gap 0;
+  }
 
-        align-items: center;
-        flex-wrap: nowrap;
-    }
+  &__accent {
+    display: inline-block;
 
-    &__accent
-    {
-        line-height: 1.15em;
+    margin-right: 4px;
+    padding: 14px 1px 13px 5px;
 
-        display: inline-block;
+    border: 3px solid $color-highlight;
 
-        margin-right: 4px;
-        padding: 14px 1px 13px 5px;
-
-        border: 3px solid $color-highlight;
-    }
+    line-height: 1.15em;
+  }
 }
