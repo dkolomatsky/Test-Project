@@ -8,11 +8,11 @@
 
   display: flex;
 
-  margin-bottom: 40px;
+  margin-bottom: $gap-x2;
 
   &::after {
     position: absolute;
-    bottom: -20px;
+    bottom: -$gap;
     left: calc(50% - 37.5px);
 
     width: 75px;

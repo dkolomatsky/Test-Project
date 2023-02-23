@@ -3,20 +3,22 @@
 
 
 .posts {
-  margin-top: 100px;
+  margin-top: $gap-x5;
   margin-bottom: 70px;
 
   @include lg-md {
-    margin-top: 80px;
+    margin-top: $gap-x4;
     margin-bottom: 50px;
   }
+
   @include md-sm {
-    margin-top: 60px;
+    margin-top: $gap-x3;
     margin-bottom: 30px;
   }
+
   @include sm {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: $gap-x3;
+    margin-bottom: $gap-x3;
   }
 
   &-container {
@@ -30,27 +32,30 @@
 
     gap: $gap;
     grid-template-areas: "b1 b1 b2 b3"
-    "b4 b5 b6 b6";
+      "b4 b5 b6 b6";
     grid-template-columns: repeat(4, 1fr);
+
     @include lg-md {
       grid-template-areas: "b1 b1 b2"
-      "b3 b4 b4"
-      "b5 b5 b6";
+        "b3 b4 b4"
+        "b5 b5 b6";
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include md-sm {
       grid-template-areas: "b1 b2"
-      "b3 b4"
-      "b5 b6";
+        "b3 b4"
+        "b5 b6";
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include sm {
       grid-template-areas: "b1"
-      "b2"
-      "b3"
-      "b4"
-      "b5"
-      "b6";
+        "b2"
+        "b3"
+        "b4"
+        "b5"
+        "b6";
       grid-template-columns: 1fr;
     }
   }
