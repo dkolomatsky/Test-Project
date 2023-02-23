@@ -13,9 +13,11 @@
     @extend %container;
     gap: $gap;
     grid-template-columns: repeat(3, 1fr);
+
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include sm {
       grid-template-columns: 1fr;
     }
@@ -41,10 +43,6 @@
     border: 2px solid rgba($color-light, 0);
     border-bottom: 2px solid rgba($color-light, 0.25);
     background-color: rgba($color-light, 0.05);
-
-    &:placeholder {
-      color: $color-gray;
-    }
 
     &:hover,
     &:focus {
