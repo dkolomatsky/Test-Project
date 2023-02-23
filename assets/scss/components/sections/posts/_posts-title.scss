@@ -10,4 +10,9 @@
   font-weight: 700;
   font-family: $font-header;
   margin-bottom: 48px;
+
+  @include lg-md {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
 }

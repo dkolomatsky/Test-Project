@@ -3,7 +3,6 @@
 
 
 .form-section {
-  height: 120px;
   background-color: $color-primary;
   padding: 30px 0;
 
@@ -12,12 +11,18 @@
     gap: $gap;
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
   }
 }
 
 .form-item {
   font-family: $font-main;
   font-size: 1.125rem;
+
 
   &__imput,
   .btn--primary {
@@ -57,5 +62,11 @@
       cursor: pointer;
 
     }
+  }
+}
+
+.form-item:nth-of-type(1) {
+  @include md-sm {
+    grid-column: 1/span 2;
   }
 }

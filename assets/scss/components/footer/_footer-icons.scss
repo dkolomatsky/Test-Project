@@ -8,20 +8,20 @@
   margin-bottom: 40px;
   display: flex;
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 37.5px);
+    bottom: -20px;
+    width: 75px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
   &__link {
     display: block;
     padding: $gap-sm;
   }
-}
-
-.footer-icons::after {
-  content: "";
-  position: absolute;
-  left: calc(50% - 37.5px);
-  bottom: -20px;
-  width: 75px;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .fab {

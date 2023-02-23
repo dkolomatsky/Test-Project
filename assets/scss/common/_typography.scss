@@ -56,16 +56,6 @@ h1 {
     }
 }
 
-h2 {
-    font-size: 2.5rem;
-    letter-spacing: 0.1em;
-    line-height: 1.2em;
-    color: $color-primary;
-    font-weight: bold;
-    font-family: $font-header;
-    margin: 0 0 3rem 0;
-}
-
 
 a {
     text-decoration: none;
@@ -76,9 +66,4 @@ button {
     overflow: visible;
     text-transform: none;
     margin: 0;
-}
-
-p {
-    font-size: 1rem;
-    font-weight: 400;
 }

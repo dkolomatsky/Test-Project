@@ -5,13 +5,13 @@
 .footer {
   background-color: $color-primary;
   padding: 50px 20px 70px;
-}
 
-.footer-container {
-  @extend %container;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  &-container {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 }

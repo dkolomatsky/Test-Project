@@ -1,0 +1,35 @@
+@use '../../../presets' as *;
+@use '../../../mixins' as *;
+
+
+.about {
+  margin: 0;
+  background-color: $color-gray-light;
+  letter-spacing: 0.055em;
+  padding: 100px 0;
+
+  @include lg-md {
+    padding: 80px 0;
+  }
+
+  @include md-sm {
+    padding: 60px 0;
+  }
+
+  &-container {
+
+    align-items: center;
+    grid-template-columns: 1fr 271px;
+    gap: $gap-x5;
+    @extend %container;
+
+    @include lg-md {
+      gap: $gap-x2;
+    }
+
+    @include md-sm {
+      gap: $gap;
+      grid-template-columns: 1fr 236px;
+    }
+  }
+}
