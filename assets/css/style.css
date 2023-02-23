@@ -192,7 +192,6 @@ html {
 
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.15;
 }
 
@@ -244,9 +243,6 @@ button {
        -o-transition: background-color 0.5s;
           transition: background-color 0.5s;
   letter-spacing: 0.1em;
-
-  font-weight: 400;
-  line-height: 1.2em;
 }
 .btn--light {
   width: 250px;
@@ -259,6 +255,8 @@ button {
 
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
+
+  font-size: 1.125rem;
 }
 .btn:hover,
 .btn:focus {
@@ -505,6 +503,7 @@ button {
   display: grid;
 
   min-width: 100%;
+  margin-bottom: 20px;
 
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
 }
@@ -549,7 +548,6 @@ button {
 
   letter-spacing: 0.1em;
 
-  font-size: 1.25rem;
   font-weight: 700;
 }
 .skill-item__image {
@@ -1023,11 +1021,24 @@ button {
   font-weight: 100;
 }
 @media (min-width: 576px) {
+  h1 {
+    font-size: 1.875rem;
+  }
   .skills {
     padding: 10px;
   }
   .skill-action {
     margin-bottom: 30px;
+  }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about-container {
+    gap: 20px;
+    grid-template-columns: 1fr 236px;
   }
   .posts .post-action {
     margin-bottom: 30px;
@@ -1052,11 +1063,12 @@ button {
 
     gap: 40px;
   }
+  .skill-item__title {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 992px) {
   h1 {
-    letter-spacing: 0.08em;
-
     font-size: 3.75rem;
   }
   .btn {
@@ -1081,8 +1093,6 @@ button {
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
-    letter-spacing: 0.075em;
-
     font-size: 2.5rem;
   }
   .btn--light {
@@ -1132,11 +1142,6 @@ button {
   }
 }
 @media (max-width: 767.8px) and (min-width: 576px) {
-  h1 {
-    letter-spacing: 0.066em;
-
-    font-size: 1.875rem;
-  }
   .btn--light {
     width: 170px;
     height: 40px;
@@ -1147,13 +1152,7 @@ button {
   .skills-container {
     gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-  }
-  .about {
-    padding: 60px 0;
-  }
-  .about-container {
-    gap: 20px;
-    grid-template-columns: 1fr 236px;
+    grid-template-columns: 1fr 1fr;
   }
   .about-text h2 {
     margin: 0 0 36px 0;
@@ -1177,8 +1176,6 @@ button {
 }
 @media (max-width: 575.8px) {
   h1 {
-    letter-spacing: 0.066em;
-
     font-size: 1.875rem;
   }
   .btn--light {
@@ -1201,10 +1198,36 @@ button {
         flex-direction: column;
   }
   .skills {
-    margin-bottom: 20px;
+    padding: 20px;
   }
   .skills-container {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
+  .about {
+    padding: 60px 0;
+  }
+  .about-container {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+  .about-text h2 {
+    margin: 0 0 36px 0;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+  }
+  .p-about:first-of-type::after {
+    right: 0;
+  }
+  .form-section__container {
+    grid-template-columns: 1fr;
   }
 }

@@ -22,7 +22,6 @@
     }
 
     &__title {
-        font-size: 1.25rem;
         font-weight: 700;
 
         z-index: 1;
@@ -30,6 +29,18 @@
         letter-spacing: .1em;
 
         @include pos-absolute;
+
+        @include md-min {
+            font-size: 1.25rem;
+        }
+
+        @include sm-min {
+            font-size: 1.125rem;
+        }
+
+        @include sm {
+            font-size: 1.125rem;
+        }
     }
 
     &__image {

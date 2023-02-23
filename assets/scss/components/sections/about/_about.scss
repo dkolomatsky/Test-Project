@@ -12,7 +12,11 @@
     padding: 80px 0;
   }
 
-  @include md-sm {
+  @include sm-min {
+    padding: 60px 0;
+  }
+
+  @include sm {
     padding: 60px 0;
   }
 
@@ -27,9 +31,14 @@
       gap: $gap-x2;
     }
 
-    @include md-sm {
+    @include sm-min {
       gap: $gap;
       grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      gap: $gap;
     }
   }
 }
