@@ -8,6 +8,17 @@
 
   @include lg-md {
     margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  @include md-sm {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  @include sm {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   &-container {
@@ -16,9 +27,11 @@
 
   &-item {
     display: grid;
+    padding-bottom: $gap;
+
     grid-template-areas:
       "b1 b1 b2 b3"
-      "b3 b4 b6 b6";
+      "b4 b5 b6 b6";
     grid-template-columns: repeat(4, 1fr);
     gap: $gap;
 
@@ -29,15 +42,36 @@
         "b5 b5 b6";
       grid-template-columns: repeat(3, 1fr);
     }
+
+    @include md-sm {
+      grid-template-areas:
+        "b1 b2"
+        "b3 b4"
+        "b5 b6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-areas:
+        "b1"
+        "b2"
+        "b3"
+        "b4"
+        "b5"
+        "b6";
+      grid-template-columns: 1fr;
+    }
   }
 }
+
+
+
+
+
 
 .posts .post-action {
 
   display: flex;
-
-  margin-top: $gap;
-
   align-items: center;
   justify-content: center;
 
