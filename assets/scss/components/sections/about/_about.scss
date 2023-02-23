@@ -13,11 +13,9 @@
   @include lg-md {
     padding: $gap-x4 0;
   }
-
   @include sm-min {
     padding: $gap-x3 0;
   }
-
   @include sm {
     padding: $gap-x3 0;
   }
@@ -28,16 +26,13 @@
     @extend %container;
     gap: $gap-x5;
     grid-template-columns: 1fr 271px;
-
     @include lg-md {
       gap: $gap-x2;
     }
-
     @include sm-min {
       gap: $gap;
       grid-template-columns: 1fr 236px;
     }
-
     @include sm {
       gap: $gap;
       grid-template-columns: 1fr;

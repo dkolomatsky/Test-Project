@@ -10,12 +10,10 @@
     margin-top: $gap-x4;
     margin-bottom: 50px;
   }
-
   @include md-sm {
     margin-top: $gap-x3;
     margin-bottom: 30px;
   }
-
   @include sm {
     margin-top: $gap-x3;
     margin-bottom: $gap-x3;
@@ -32,30 +30,27 @@
 
     gap: $gap;
     grid-template-areas: "b1 b1 b2 b3"
-      "b4 b5 b6 b6";
+    "b4 b5 b6 b6";
     grid-template-columns: repeat(4, 1fr);
-
     @include lg-md {
       grid-template-areas: "b1 b1 b2"
-        "b3 b4 b4"
-        "b5 b5 b6";
+      "b3 b4 b4"
+      "b5 b5 b6";
       grid-template-columns: repeat(3, 1fr);
     }
-
     @include md-sm {
       grid-template-areas: "b1 b2"
-        "b3 b4"
-        "b5 b6";
+      "b3 b4"
+      "b5 b6";
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include sm {
       grid-template-areas: "b1"
-        "b2"
-        "b3"
-        "b4"
-        "b5"
-        "b6";
+      "b2"
+      "b3"
+      "b4"
+      "b5"
+      "b6";
       grid-template-columns: 1fr;
     }
   }
